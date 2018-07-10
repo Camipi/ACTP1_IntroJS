@@ -14,6 +14,14 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      .red {
+        color: red;
+      }
+      .section-1 {
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body>
     <h1> Hey !! </h1>
@@ -62,5 +70,11 @@
 
       </fieldset>
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $("h1").css("color", "red");
+      $(".section-1").css("color", "red");
+    </script>
   </body>
 </html>
