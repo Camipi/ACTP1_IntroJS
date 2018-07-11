@@ -15,14 +15,24 @@
     <meta charset="utf-8">
     <title></title>
     <style>
+
+      
+
       .red {
         color: red;
       }
+        
       .section-1 {
         background-color: yellow;
       }
+
+      .row-3 {
+        transition: 1s;    
+        background-color: gray;      
+      }
+
     </style>
-  </head>
+  </head> 
   <body>
     <h1> Hey !! </h1>
     <section class="section-1">
@@ -73,8 +83,29 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
+
       $("h1").css("color", "red");
-      $(".section-1").css("color", "red");
+      $(".section-1").css("background-color", "yellow");
+
+      counter = $(".counter").text();
+      counter = parseInt(counter);
+      counter = counter + 10;
+      $(".counter").text(counter);
+
+
+      $("#row-3").on("click", function(){
+       $("#row-3").css("background-color","gray");
+      })
+
+      $("h1").on("click", function(){
+        $("h1").css("font-size", "4em");
+      })
+
+      $("table tr:last-child").css("background-color", "red");
+  
+
     </script>
   </body>
 </html>
+
+
