@@ -28,5 +28,25 @@ Para la solución puedes inspirarte en: https://codepen.io/gabrieleromanato/pen/
   </head>
   <body>
 
+  <img src="../img/cool-wallpaper-1.jpg" alt="wallpaper">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script>
+
+  	$(function() {
+  		$("img").on("contextmenu", function(e){
+  			e.preventDefault();
+  			$("img").text( "" );
+  			$(this).next().text($(this).attr("src"));
+  		});
+  	});
+
+  	$("img").bind("click", function() {
+  		alert("Imagen con derechos de autor");
+  	})
+
+  </script>
+
   </body>
 </html>
